@@ -22,7 +22,6 @@ class GifListContainer extends Component{
     render(){
         return(
             <div>
-                {this.state.GIF}
                 <GifSearch />
                 <GifList Giphys={this.state.GIF}/>
             </div>
