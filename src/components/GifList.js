@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 class GifList extends Component{
     render(){
         return(
-            <div></div>
+            <div>
+                <ul>
+                    <li>{this.props.Giphys}</li>
+                </ul>
+            </div>
         )
     }
 }
