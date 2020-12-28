@@ -22,10 +22,10 @@ class GifSearch extends Component{
     render(){
         return(
             <div>
-                <form align="right" >
+                <form align="right" onSubmit={event => this.handleSubmit(event)}>
                     <label>Enter a Search Term:</label><br></br>
-                    <input type="text" name="search" /><br></br>
-                    <input type="submit" onChange={event => this.handleQueryChange(event)} value={this.state.query} />
+                    <input type="text" onChange={event => this.handleQueryChange(event)} value={this.state.query} /><br></br>
+                    <input type="submit" />
                 </form>
             </div>
         )
