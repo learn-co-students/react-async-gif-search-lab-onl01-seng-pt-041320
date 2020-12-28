@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import GifSearch from '../components/GifSearch'
+import GifList from '../components/GifList'
+
 class GifListContainer extends Component{
     state = {
         giphys: []
@@ -16,7 +19,10 @@ class GifListContainer extends Component{
     }
     render(){
         return(
-            <div></div>
+            <div>
+                <GifSearch />
+                <GifList Giphys={this.state.giphys}/>
+            </div>
         )
     }
 }
