@@ -5,7 +5,7 @@ import GifList from '../components/GifList'
 
 class GifListContainer extends Component{
     state = {
-        GIF: []
+        gif: []
     }
 
     componentDidMount(){
@@ -14,7 +14,7 @@ class GifListContainer extends Component{
         .then(giphys => {
             console.log(giphys.data)
             giphys.data.forEach((giphy) => this.setState({
-                GIF: giphy.images.original.url
+                gif: giphy.images.original.url
             })
             )
         })
@@ -23,7 +23,7 @@ class GifListContainer extends Component{
         return(
             <div>
                 <GifSearch />
-                <GifList Giphys={this.state.GIF}/>
+                <GifList giphys={this.state.gif}/>
             </div>
         )
     }

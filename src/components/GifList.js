@@ -5,7 +5,7 @@ class GifList extends Component{
         return(
             <div>
                 <ul>
-                    <li>{this.props.Giphys}</li>
+                    <li>{this.props.giphys}</li>
                 </ul>
             </div>
         )
