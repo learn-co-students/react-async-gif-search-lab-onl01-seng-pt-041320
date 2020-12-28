@@ -14,7 +14,7 @@ class GifListContainer extends Component{
         .then(giphys => {
             console.log(giphys.data)
             giphys.data.forEach((giphy) => this.setState({
-                GIF: giphy.embed_url
+                GIF: giphy.url
             })
             )
         })
