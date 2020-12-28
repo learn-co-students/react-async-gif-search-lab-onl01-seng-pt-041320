@@ -12,14 +12,16 @@ class GifListContainer extends Component{
         fetch('https://api.giphy.com/v1/gifs/search?q=dolphin&api_key=BRzpBD4aq2xAfR8ioC5XHlTZcYyp5Yc2&rating=g')
         .then(res => res.json())
         .then(giphys => {
-            console.log(giphys.data)
-            giphys.data.forEach((giphy) => this.setState({
-                gif: giphy.images.original.url
+            let gif_arr = giphys.data.slice(0, 3);
+            //let x = giphys.data.forEach((giphy) => this.state.gif.push(giphy.images.original.url))
+            this.setState({
+                gif: gif_arr
             })
-            )
         })
     }
+
     render(){
+        console.log(this.state.gif)
         return(
             <div>
                 <GifSearch />
