@@ -5,7 +5,8 @@ import GifList from '../components/GifList'
 
 class GifListContainer extends Component{
     state = {
-        gif: []
+        gif: [],
+        input: ""
     }
 
     componentDidMount(){
@@ -24,7 +25,7 @@ class GifListContainer extends Component{
         console.log(this.state.gif)
         return(
             <div>
-                <GifSearch />
+                <GifSearch handlesubmit={this.handleSubmit}/>
                 <GifList giphys={this.state.gif}/>
             </div>
         )
