@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 class GifSearch extends Component{
     state = {
-        query: "",
-        submittedData: []
+        query: ""
     }
 
     handleQueryChange = event => {
@@ -14,9 +13,7 @@ class GifSearch extends Component{
 
     handleSubmit = event => {
         event.preventDefault();
-        let formData = {query: this.state.query};
-        let data_arr = this.state.submittedData.concat(formData);
-        this.setState({submittedData: data_arr});
+        this.props.handlesubmit(this.state.query);
     }
 
     render(){
